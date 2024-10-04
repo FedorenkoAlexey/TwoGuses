@@ -89,13 +89,10 @@ img {
 }
 
 img {
-	width: 150px;
-	/* Початковий розмір зображення */
+	width: 150px;	/* Початковий розмір зображення */
 	height: auto;
-	transition: transform 0.3s ease;
-	/* Плавний перехід для зміни розміру */
-	cursor: pointer;
-	/* Курсор у вигляді руки */
+	transition: transform 0.3s ease;	/* Плавний перехід для зміни розміру */
+	cursor: pointer;	/* Курсор у вигляді руки */ 
 }
 
 img:hover {
@@ -105,16 +102,11 @@ img:hover {
 	/* Додаємо тінь під зображенням */
 }
 
-img:active {
-
-	transform: scale(6);
-	/* Збільшуємо зображення в 3 рази при натисканні */
+img.expanded {
+  transform: scale(6); /* Збільшення зображення в 3 рази */
+  z-index: 10; /* Щоб зображення було вище інших елементів */
+  position: relative; /* Для коректного накладання */
 }
-
-/* .inactive {
-  background-color: #ccc;
-  color: #666;
-} */
 
 .inactive img {
 	transform: none;
