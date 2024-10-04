@@ -31,11 +31,9 @@ const tmcItems = [
   { id: 30, name: "Телевізор Saturn LED 32 O Black № 73", img: "Images/030.jpg" },
   { id: 31, name: "Тестомес Alimacchine SM30FT2V Інв.№268", img: "Images/031.jpg" },
   { id: 32, name: "Шафа холодильна ШХ R 700M №69", img: "Images/032.jpg" },
-];;
+];
 
 const table = document.getElementById('zodiacTable');
-
-// localStorage.clear(); // Очистити local Storage (при необхідності)
 
 // Функція для додавання рядків у таблицю
 function populateTable() {
@@ -72,6 +70,9 @@ function populateTable() {
       button.textContent = 'Відновити'; // Змінюємо текст кнопки
     }
   });
+  
+  // Додаємо обробники для зображень
+  addImageToggleListeners();
 }
 
 // Функція для перевірки, чи рядок неактивний
@@ -115,5 +116,20 @@ function removeInactiveRow(id) {
   localStorage.setItem('inactiveRows', JSON.stringify(updatedRows));
 }
 
-// Виклик функції для заповнення таблиці
+// Функція для додавання обробників натискання на зображення
+function addImageToggleListeners() {
+  const images = document.querySelectorAll('img');  // Отримуємо всі зображення з таблиці
+
+  images.forEach(image => {
+    image.addEventListener('click', () => {
+      const row = image.closest('tr');
+      if (!row.classList.contains('inactive')) {
+        // Перемикаємо клас "expanded" тільки для активних рядків
+        image.classList.toggle('expanded');
+      }
+    });
+  });
+}
+
+// Ініціалізація таблиці
 populateTable();
