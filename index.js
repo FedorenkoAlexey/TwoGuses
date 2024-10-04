@@ -60,7 +60,7 @@ function isRowInactive(id) {
 
 // Функція для перемикання статусу рядка
 function toggleRowStatus(id, button) {
-  const password = prompt('Введіть пароль для видалення/відновлення (1771 за умовчанням):');
+  const password = prompt('Введіть пароль для видалення/відновлення :');
   const row = document.getElementById(`row-${id}`);
   
   if (password === '1771') {
