@@ -52,7 +52,7 @@ body {
 	/* Відступи по 50px з боків */
 	height: calc(100vh - 150px);
 	/* Відступ зверху 200px */
-	margin-top: 150px;
+	margin-top: 50px;
 	overflow-y: auto;
 	/* Вмикаємо вертикальну прокрутку */
 	background-color: rgba(255, 255, 255, 0.8);
