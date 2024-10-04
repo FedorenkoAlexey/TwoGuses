@@ -1,0 +1,96 @@
+﻿.inactive {
+  background-color: #bababa; /* Світло-сірий фон */
+  color: gray; /* Сірий текст */
+  text-decoration: line-through; /* Перекреслюємо текст */
+  /* pointer-events: none; Забороняємо взаємодію з рядком */
+}
+/* Зробимо фонове зображення нерухомим */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: url('images/Guses.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#zodiacTable td:nth-child(2) {
+  text-align: left; /* Вирівнюємо текст по лівому краю */
+  padding-left: 15px;
+}
+
+.container {
+  position: relative;
+  width: 80%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.column-sign {
+  width: 60%;
+}
+
+/* Стилі для блоку з таблицею */
+.table-container {
+  width: calc(120% - 30px); /* Відступи по 50px з боків */
+  height: calc(100vh - 150px); /* Відступ зверху 200px */
+  margin-top: 150px;
+  overflow-y: auto; /* Вмикаємо вертикальну прокрутку */
+  background-color: rgba(255, 255, 255, 0.8); /* Прозорий білий фон для таблиці */
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  margin-bottom: 10px; /* Відступ знизу 10px */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+img {
+  width: 50px;
+  height: 50px;
+}
+
+img {
+  
+width: 150px; /* Початковий розмір зображення */
+  
+height: auto;
+  
+transition: transform 0.3s ease; /* Плавний перехід для зміни розміру */
+  
+cursor: pointer; /* Курсор у вигляді руки */
+
+}
+
+img:hover {
+  
+transform: translateY(-2mm); /* Зміщуємо зображення вгору на 2 мм */
+  
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Додаємо тінь під зображенням */
+
+}
+
+
+
+img:active {
+  
+transform: scale(6); /* Збільшуємо зображення в 3 рази при натисканні */
+
+}
+
+/* .inactive {
+  background-color: #ccc;
+  color: #666;
+} */
