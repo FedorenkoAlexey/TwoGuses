@@ -50,9 +50,9 @@ body {
 .table-container {
 	width: calc(120% - 30px);
 	/* Відступи по 50px з боків */
-	height: calc(100vh - 150px);
+	height: calc(100vh - 100px);
 	/* Відступ зверху 200px */
-	margin-top: 50px;
+	margin-top: 100px;
 	overflow-y: auto;
 	/* Вмикаємо вертикальну прокрутку */
 	background-color: rgba(255, 255, 255, 0.8);
@@ -60,7 +60,7 @@ body {
 	padding: 10px;
 	border-radius: 10px;
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-	margin-bottom: 10px;
+	/* margin-bottom: 10px;
 	/* Відступ знизу 10px */
 }
 
@@ -107,6 +107,16 @@ img.expanded {
   z-index: 10; /* Щоб зображення було вище інших елементів */
   position: relative; /* Для коректного накладання */
 }
+
+ /*img:active {
+
+	transform: scale(6);
+	}
+
+/* .inactive {
+  background-color: #ccc;
+  color: #666;
+} */
 
 .inactive img {
 	transform: none;
