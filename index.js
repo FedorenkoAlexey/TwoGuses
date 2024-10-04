@@ -1,8 +1,8 @@
 ﻿const zodiacSigns = [
-  { id: 1, name: "Овен", img: "https://example.com/oven.jpg" },
-  { id: 2, name: "Телець", img: "images/02-big.jpg" },
-  { id: 3, name: "Близнюки", img: "../images/02-big.jpg" },
-  { id: 4, name: "Рак", img: images/02-big.jpg },
+  { id: 1, name: "Овен1", img: "https://example.com/oven.jpg" },
+  { id: 2, name: "Телець1", img: "images/02-big.jpg" },
+  { id: 3, name: "Близнюки1", img: "../images/02-big.jpg" },
+  { id: 4, name: "Ра1к", img: images/02-big.jpg },
   { id: 5, name: "Лев", img: ../images/02-big.jpg },
   { id: 6, name: "Діва", img: "https://example.com/diva.jpg" },
   { id: 7, name: "Терези", img: "https://example.com/terezi.jpg" },
