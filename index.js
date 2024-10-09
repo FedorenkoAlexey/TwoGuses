@@ -37,7 +37,7 @@ const tmcItems = [
 ];
 
 const table = document.getElementById('zodiacTable');
-localStorage.clear();
+//localStorage.clear();
 
 // Функція для додавання рядків у таблицю
 function populateTable() {
