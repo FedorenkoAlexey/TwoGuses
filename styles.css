@@ -7,6 +7,12 @@
 	/* Перекреслюємо текст */
 	/* pointer-events: none; Забороняємо взаємодію з рядком */
 }
+/* .row-5, .row-6  {                        /* НЕ АКТИВНІ ПОЗИЦІЇ 
+	background-color: #bababa;
+	color: gray;
+	text-decoration: line-through;
+	pointer-events: none;
+} */
 
 .inactive img {
 	transform: none;/* Прибираємо будь-яке збільшення */
@@ -31,6 +37,7 @@ body {
 	text-align: left;
 	/* Вирівнюємо текст по лівому краю */
 	padding-left: 15px;
+
 }
 
 .container {
@@ -43,16 +50,20 @@ body {
 }
 
 .column-sign {
-	width: 60%;
+	width: 70%;
+}
+
+.column-count {
+	width: 10%
 }
 
 /* Стилі для блоку з таблицею */
 .table-container {
 	width: calc(120% - 30px);
 	/* Відступи по 50px з боків */
-	height: calc(100vh - 100px);
+	height: calc(100vh - 50px);
 	/* Відступ зверху 200px */
-	margin-top: 100px;
+	margin-top: 50px;
 	overflow-y: auto;
 	/* Вмикаємо вертикальну прокрутку */
 	background-color: rgba(255, 255, 255, 0.8);
@@ -60,6 +71,9 @@ body {
 	padding: 10px;
 	border-radius: 10px;
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+	
+	font-size: 18px; /* Збільшує розмір тексту */
+  font-weight: bold; /* Додає жирність, якщо потрібно */
 	/* margin-bottom: 10px;
 	/* Відступ знизу 10px */
 }
