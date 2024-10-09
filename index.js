@@ -25,9 +25,9 @@ const tmcItems = [
   { id: 24, name: "Стіл В-6 1800*500*850 (з мийкою)", img: "Images/024.jpg", count: "1" },
   { id: 25, name: "Стіл для збирання відходів В-5 1300*700*850", img: "Images/025.jpg", count: "1" },
   { id: 26, name: "Стіл холодильний", img: "Images/026.jpg", count: "3" },
-	{ id: 27, name: "Стіл 1200*750*750 (100) з вставкою  із плитки ", img: "Images/027.jpg", count: "19" },
-	{ id: 28, name: "Стіл 'Кантрі - ексклюзив'", img: "Images/028.jpg", count: "12" },
-	{ id: 29, name: "Лавки зі спинкою 'Кантрі - ексклюзив' ", img: "Images/029.jpg", count: "13" },
+  { id: 27, name: "Стіл 1200*750*750 (100) з вставкою  із плитки ", img: "Images/027.jpg", count: "19" },
+  { id: 28, name: "Стіл 'Кантрі - ексклюзив'", img: "Images/028.jpg", count: "12" },
+  { id: 29, name: "Лавки зі спинкою 'Кантрі - ексклюзив' ", img: "Images/029.jpg", count: "13" },
   { id: 30, name: "Стілець з фігурною спинкою", img: "Images/030.jpg", count: "24" },
   { id: 31, name: "Стілець мадрас дк. браун", img: "Images/031.jpg", count: "32" },
   { id: 32, name: "Телевізор SAMSUNG UE-32EH4000 Інв.№381", img: "Images/032.jpg", count: "1" },
@@ -37,7 +37,7 @@ const tmcItems = [
 ];
 
 const table = document.getElementById('zodiacTable');
-//localStorage.clear();
+localStorage.clear();
 
 // Функція для додавання рядків у таблицю
 function populateTable() {
@@ -91,32 +91,32 @@ function isRowInactive(id) {
 }
 
 // Функція для перемикання статусу рядка
-function toggleRowStatus(id, button) {
-  const password = prompt('Введіть пароль для видалення/відновлення:');
-  const row = document.getElementById(`row-${id}`);
-  
-  if (password === '1771') {
-    if (row.classList.contains('inactive')) {
-      // Відновлюємо рядок
-      row.classList.remove('inactive'); // Видаляємо клас неактивності
-      button.textContent = 'Видалити'; // Повертаємо текст кнопки
-      
+//function toggleRowStatus(id, button) {
+//  const password = prompt('Введіть пароль для видалення/відновлення:');
+//  const row = document.getElementById(`row-${id}`);
+//  
+//  if (password === '1771') {
+//    if (row.classList.contains('inactive')) {
+//      // Відновлюємо рядок
+//      row.classList.remove('inactive'); // Видаляємо клас неактивності
+//      button.textContent = 'Видалити'; // Повертаємо текст кнопки
+//      
       // Видаляємо ID з Local Storage
-      removeInactiveRow(id);
-    } else {
-      // Видаляємо рядок
-      row.classList.add('inactive'); // Додаємо клас для неактивного статусу
-      button.textContent = 'Відновити'; // Змінюємо текст кнопки
+//      removeInactiveRow(id);
+//    } else {
+     // Видаляємо рядок
+//      row.classList.add('inactive'); // Додаємо клас для неактивного статусу
+ //     button.textContent = 'Відновити'; // Змінюємо текст кнопки
 
       // Зберігаємо неактивний рядок у Local Storage
-      const inactiveRows = JSON.parse(localStorage.getItem('inactiveRows')) || [];
-      inactiveRows.push(id);
-      localStorage.setItem('inactiveRows', JSON.stringify(inactiveRows));
-    }
-  } else {
-    alert('Невірний пароль!');
-  }
-}
+//      const inactiveRows = JSON.parse(localStorage.getItem('inactiveRows')) || [];
+//      inactiveRows.push(id);
+//      localStorage.setItem('inactiveRows', JSON.stringify(inactiveRows));
+//    }
+//  } else {
+//    alert('Невірний пароль!');
+//  }
+//}
 
 // Функція для видалення id з Local Storage
 function removeInactiveRow(id) {
